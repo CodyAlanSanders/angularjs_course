@@ -1,16 +1,13 @@
-(function() { //wrapping it in a closure
-	var app = angular.module('gemStore', []);
-	
-	//Name the controller and then anonymous function
-	app controller('StoreController', function(){
-		this.product = gem;
-	});
-	
-	//gem variable
-	var gem = {
-		name: 'Dodecahedron',
-		price: 2.95,
-		description: '...'
-	}
-	
-})();  //end closure
+(function() {
+  var app = angular.module('gemStore', []);
+
+  app.controller('StoreController', function(){
+		this.products = gems;
+  });
+
+  var gems = [
+    { name: 'Azurite', price: 2.95 },
+    { name: 'Bloodstone', price: 5.95 },
+    { name: 'Zircon', price: 3.95 }
+  ];
+})();
